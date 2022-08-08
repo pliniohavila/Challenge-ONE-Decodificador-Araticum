@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Araticum - Decodificador de Texto</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="text/javascript" src="./script.js" defer></script>
+</head>
+<body>
+<header>
+    <img src="./assets/Logo-Alura.svg" alt=""/>
+</header>
+<main>
+    <div class="container">
+        <div class="caixa-entrada-texto">
+            <textarea 
+                name="entrada" 
+                id="entrada" 
+                cols="10" 
+                rows="10" 
+                class="entrada"
+                placeholder="Digite seu texto"    
+            >
+            </textarea>
+            <div class="regras">
+                <img src="./assets/bi_exclamation-circle-fill.svg" alt="" /> 
+                Apenas letras minúsculas e sem acento.
+            </div>
+            <div class="caixa-btns">
+                <button class="criptografar" onclick="criptografar()">Criptografar</button>
+                <button class="descriptografar" onclick="descriptografar()">Descriptografar</button>
+            </div>
+        </div>
+        <div class="caixa-saida-texto">
+            <div class="sem-saida">
+                <div class="img-sem-saida"></div>
+                <img src="./assets/img-sem-texto.svg" />
+                <p><strong>Nenhuma mensagem encontrada</strong></p>
+                <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+            </div>
+            <div class="saida-texto">
+                <div class="saida-texto-conteudo">retornar uma palavra criptografada para a versão original. </div>
+                <button class="copiar" onclick="copiar()">Copiar</button>
+            </div>
+            
+        </div>
+    </div>
+</main>
+<footer>
+    <p>Made with 💜 by <a href="https://github.com/pliniocode">Plínio</a></p>
+</footer>
+    
+</body>
+</html>

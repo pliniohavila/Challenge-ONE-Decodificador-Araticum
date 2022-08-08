@@ -1,0 +1,206 @@
+:root {
+    --dark-blue-100: #609ED4;
+    --dark-blue-200: #356EA9;
+    --dark-blue-300: #0A3871;
+    --dark-blue-400: #072B61;
+    --dark-blue-500: #052051;
+
+    --light-blue-100: #F3F5FC;
+    --light-blue-200: #EFF1FA;
+    --light-blue-300: #E9ECF8;
+    --light-blue-400: #AAB2D5;
+    --light-blue-500: #AAB2D5;
+
+    --gray-100: #CED4DA;
+    --gray-200: #ADB5BD;
+    --gray-300: #868E96;
+    --gray-400: #495057;
+    --gray-500: #343A40;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, textarea, button {
+    font-size: 1rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+}
+
+body {
+    background-color: var(--light-blue-100);
+}
+
+header {
+    padding: 3.5rem 0 0 3.5rem;
+}
+
+button {
+    text-align: center;
+    font-weight: 700;
+    line-height: 1;
+    padding: 1.5rem;
+    border: 0;
+    border-radius: 24px;
+    width: 328px;
+    height: 67px;
+
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    gap: 6rem;
+}
+
+.caixa-entrada-texto {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 0 0 10rem; 
+    height: 75vh;
+    width: 80%;
+}
+
+/* textarea */
+.entrada {
+    width: 100%;
+    height: 80%;
+    color: var(--dark-blue-300);
+    font-weight: 700;
+    background: transparent;
+    border: 0;
+    outline: none;
+    resize: none;
+}
+
+.regras {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--gray-400);
+    line-height: 1.6;
+}
+
+.caixa-btns {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.3rem;
+    text-align: center;
+}
+
+.criptografar {
+    background-color: var(--dark-blue-300);
+    color: white;
+}
+
+.criptografar:hover {
+    background-color: var(--dark-blue-400);
+}
+
+.descriptografar {
+    color: var(--dark-blue-300);
+    border: 1px solid var(--dark-blue-300);
+}
+
+.descriptografar:hover {
+    background-color: var(--gray-100);
+}
+
+.caixa-saida-texto {
+    position: relative;
+    top: -4.5rem;
+    right: 3rem;
+    height: 90vh;
+    padding: 2rem;
+    background-color: white;
+    color: var(--gray-400);
+    border-radius: 32px;
+
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+.sem-saida {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    color: var(--gray-500);
+    font-size: 1.5rem;
+    line-height: 1.6;
+
+    text-align: center;
+}
+
+.img-sem-saida {
+    background-image: url("./assets/img-sem-texto.svg");
+}
+
+.sem-saida > p:last-child {
+    font-size: 1rem;
+}
+
+.saida-texto {
+    display: flex;
+    justify-items: center;
+    color: var(--gray-400);
+    display: none;
+} 
+
+.saida-texto-conteudo {
+    width: 100%;
+    height: 80%;
+}
+
+.copiar {
+    color: var(--dark-blue-300);
+    border: 1px solid var(--dark-blue-300);
+    width: 80%;
+    
+    position: absolute;
+    bottom: 2rem;
+    left: 3rem;
+}
+
+.copiar:hover {
+    background-color: var(--gray-100);
+}
+
+footer {
+	text-align: center;
+}
+
+
+@media(max-width: 670px) {
+    .container{
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .caixa-entrada-texto {
+        width: 100%;
+        padding: 3rem 3rem 0 3em;
+    }
+
+    .caixa-saida-texto {
+        top: 0;
+        margin: 0 2rem;
+        right: 0;
+    }
+
+    .copiar {
+        width: 80%;
+        left: 0;
+        margin: 0 3rem;
+    }
+
+    .img-sem-saida {
+        background-image: url("");
+        display: none;
+    }
+}
